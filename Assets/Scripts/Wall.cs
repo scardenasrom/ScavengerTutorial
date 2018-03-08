@@ -14,7 +14,7 @@ public class Wall : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
-    void DamageWall(int loss)
+    public void DamageWall(int loss)
     {
         spriteRenderer.sprite = dmgSprite;
         hp = hp - loss;

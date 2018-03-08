@@ -25,6 +25,7 @@ public abstract class MovingObject : MonoBehaviour {
         // Disabling our own boxCollider so the raycasting doesn't hit ourselves
         boxCollider.enabled = false;
         hit = Physics2D.Linecast(start, end, blockingLayer);
+        boxCollider.enabled = true;
         if (hit.transform == null)
         {
             StartCoroutine(SmoothMovement(end));
